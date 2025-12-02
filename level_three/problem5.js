@@ -13,6 +13,11 @@ function easyProblem1(ticketCategory, age) {
     // TODO: Write your code here
     // If ticketCategory is "Platinum" AND age is 18, return "can access"
     // Otherwise return "go home"
+    if (ticketCategory === "Platinum" && age === 18) {
+        return "can access";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -29,6 +34,11 @@ function easyProblem2(ticketCategory, age) {
     // TODO: Write your code here
     // If age is 18 AND ticketCategory is NOT "Platinum", return "can sign in"
     // Otherwise return "go home"
+    if (age === 18 && ticketCategory !== "Platinum") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -54,6 +64,14 @@ function mediumProblem(ticketCategory, age) {
     // }
     //
     // Remember: Check ticketCategory === "Platinum" && age === 18 first!
+
+    if (ticketCategory === "Platinum" && age === 18) {
+        return "can access";
+    } else if (age === 18 && ticketCategory !== "Platinum") {
+        return "can sign in";
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -79,8 +97,16 @@ function hardProblem(ticketCategory, age) {
     //       - If ticketCategory is anything else → return "can sign in"
     //   - If age is NOT 18:
     //     - Return "go home"
-    //
-    // Why is this structure better? Think about it!
+
+    if (age === 18) {
+        if (ticketCategory === "Platinum") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
 }
 
 // Test your code:
@@ -90,4 +116,3 @@ console.log("Hard - Test 3:", hardProblem("Platinum", 17)); // Should print: "go
 console.log("Hard - Test 4:", hardProblem("General", 18)); // Should print: "can sign in"
 console.log("Hard - Test 5:", hardProblem("Premium", 25)); // Should print: "go home"
 console.log("Hard - Test 6:", hardProblem("Standard", 18)); // Should print: "can sign in"
-

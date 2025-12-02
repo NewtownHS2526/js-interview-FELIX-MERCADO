@@ -10,6 +10,11 @@
 // Task: Check if patronLevel is "Collector" and age is 21
 // Hint: Use if statement with && operator
 function easyProblem1(patronLevel, age) {
+    if (patronLevel === "Collector" && age === 21) {
+        return "can access";
+    } else {
+        return "go home";
+    }
     // TODO: Write your code here
     // If patronLevel is "Collector" AND age is 21, return "can access"
     // Otherwise, return "go home"
@@ -25,6 +30,14 @@ console.log("Easy 1 - Test 2:", easyProblem1("Collector", 20)); // Should print:
 // Task: Check if age is 21 and patronLevel is NOT "Collector"
 // Hint: Use if-else with !== operator
 function easyProblem2(patronLevel, age) {
+    if (patronLevel === "Collector" && age === 21) {
+        return "can access";
+    } else if (patronLevel === "Collector" && age !== 21) {
+        return "can sign in";
+    } else{
+        return "go home";
+    }
+
     // TODO: Write your code here
     // If age is 21 AND patronLevel is NOT "Collector", return "can sign in"
     // Otherwise, return "go home"
@@ -40,6 +53,14 @@ console.log("Easy 2 - Test 2:", easyProblem2("Collector", 21)); // Should print:
 // Task: Handle all three cases using if-else if-else
 // Hint: Check conditions in order: first "Collector" + 21, then 21 + not "Collector", then else
 function mediumProblem(patronLevel, age) {
+    if (patronLevel === "Collector" && age === 21) {
+        return "can access";
+    } else if (patronLevel === "Collector" && age !== 21) {
+        return "can sign in";
+    } else{
+        return "go home";
+    }
+    
     // TODO: Write your code here
     // Use if-else if-else to handle all three cases:
     // 1. patronLevel === "Collector" && age === 21 → "can access"
@@ -58,6 +79,17 @@ console.log("Medium - Test 3:", mediumProblem("Student", 25)); // Should print: 
 // Task: Create a function that checks age first, then patronLevel
 // Hint: Use nested if statements - check age first, then patronLevel inside
 function hardProblem(patronLevel, age) {
+    
+    if (age === 21) {
+        if (guestStatus === "Connoisseur") {
+            return "can access";
+        } else {
+            return "can sign in";
+        }
+    } else {
+        return "go home";
+    }
+
     // TODO: Write your code here
     // Step 1: Check if age is 21
     //   - If yes, check patronLevel:
